@@ -8,7 +8,7 @@
         <link rel="preconnect" href="https://fonts.gstatic.com">
         <link href="https://fonts.googleapis.com/css2?family=Lato:wght@100;400&display=swap" rel="stylesheet">
         <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@700&display=swap" rel="stylesheet">  
-        <link rel="stylesheet" type="text/css" href="{{url_for('static', filename='css/styleIndex.css')}}"/>
+        <link rel="stylesheet" type="text/css" href="{{url_for('static', filename='css/styleDisciplina.css')}}"/>
         </head>
     <body>                    
         <header>
@@ -16,10 +16,10 @@
                 <ul>
                     <li><a href="#"><img src="{{url_for('static', filename='img/vertical.png')}}"></a></li>
                     <br>
-                    <li><a href="#"><img src="{{url_for('static', filename='img/dashboard-active.png')}}"></a></li>
+                    <li><a href="{{url_for('home')}}"><img src="{{url_for('static', filename='img/dashboar.png')}}"></a></li>
                     <li><a href="#"><img src="{{url_for('static', filename='img/graph.png')}}"></a></li>
                     <li><a href="#"><img src="{{url_for('static', filename='img/appointments.png')}}"></a></li>
-                    <li><a href="#"><img src="{{url_for('static', filename='img/enquiries.png')}}"></a></li>
+                    <li><a href="#"><img src="{{url_for('static', filename='img/enquiries-active.png')}}"></a></li>
                     <li><a href="#"><img src="{{url_for('static', filename='img/messages.png')}}"></a></li>
                     <li><a href="#"><img src="{{url_for('static', filename='img/users.png')}}"></a></li>
                     <li><a href="#"><img src="{{url_for('static', filename='img/settings.png')}}"></a></li>
@@ -30,61 +30,66 @@
         <article id="informacao-geral">
             <section id="saudacao">
                 <h1>Ambiente Virtual de Aprendizagem</h1>
-                <p>Seja bem-vindo de volta, Guilherme Delgado!</p>
-                <button>Precisa de ajuda?</button>
+                <p>Seja bem-vindo de volta, Guilherme Delgado, sua última aula assistida foi: Aula 7 - Adobe XD <a>(Voce dejesa retornar a aula?)</a></p>
+
+                <button>Falar com o Professor</button>
             </section>
-            <section id="atalhos-titulo">
-                <h2>Atalhos</h2>
-            </section>
-            <section id="atalhos">
-                    <div>
-                        <p>Avaliações</p>
-                        <h3>{{provas}}</h3>
-                    </div>
-                    <div>
-                        <p>Trabalhos</p>
-                        <h3 id="trabalhos">{{trabalhos}}</h3>
-                    </div>
-                    <div>
-                        <p>Fóruns</p>
-                        <h3>{{foruns}}</h3>
-                    </div>
-                    <div>
-                        <p>Rendimento</p>
-                        <h3>46%</h3>
-                    </div>
-            </section>
-            <section id="disciplinas-titulo-area">
-                <h2>Disciplinas</h2>
+            <section id="aula-conteudo-titulo">
+                <h2>Todo Conteúdo</h2>
                 <hr>
             </section>
-            <section id="disciplinas">
-                {% for disciplina in disciplina_lista %}
+            <section id="aula-todo-conteudo">
                 <section>
-                    <h3 id="nome-disciplinas">{{disciplina.get_nome()}}</h3>
-                    <div id="disciplinas-info">
-                        <div id="professor">
-                            <p>Professor</p>
-                            <h4>{{disciplina.get_professor()}}</h4>
-                        </div>
-                        <div id="periodo">
-                            <p>Periodo:</p>
-                            <h4>4</h4>
-                        </div>
-                        <div id="horario">
-                            <p>Horário:</p>
-                            <h4 id=>{{disciplina.get_horario()}}</h4>
-                        </div>
-                    </div>
-                    <p id="acessar"><a href="{{url_for('disciplina', disciplina_id = disciplina.get_id())}}">Acessar</a></p>
+                    <h3 id="aula-numero"> Aula numero</h3>
+                    <p id="aula-titulo">Aula tiutlo</p>
+                    <button id="ver-mais">Iniciar Aula</button>
                 </section>
-                {% endfor %}
+                <section>
+                    <h3 id="aula-numero"> Aula numero</h3>
+                    <p id="aula-titulo">Aula tiutlo</p>
+                    <button id="ver-mais">Iniciar Aula</button>
+                </section>
+                <section>
+                    <h3 id="aula-numero"> Aula numero</h3>
+                    <p id="aula-titulo">Aula tiutlo</p>
+                    <button id="ver-mais">Iniciar Aula</button>
+                </section>
+                <section>
+                    <h3 id="aula-numero"> Aula numero</h3>
+                    <p id="aula-titulo">Aula tiutlo</p>
+                    <button id="ver-mais">Iniciar Aula</button>
+                </section>
+                <section>
+                    <h3 id="aula-numero"> Aula numero</h3>
+                    <p id="aula-titulo">Aula tiutlo</p>
+                    <button id="ver-mais">Iniciar Aula</button>
+                </section>
+                <section>
+                    <h3 id="aula-numero"> Aula numero</h3>
+                    <p id="aula-titulo">Aula tiutlo</p>
+                    <button id="ver-mais">Iniciar Aula</button>
+                </section>
+                <section>
+                    <h3 id="aula-numero"> Aula numero</h3>
+                    <p id="aula-titulo">Aula tiutlo</p>
+                    <button id="ver-mais">Iniciar Aula</button>
+                </section>
+                <section>
+                    <h3 id="aula-numero"> Aula numero</h3>
+                    <p id="aula-titulo">Aula tiutlo</p>
+                    <button id="ver-mais">Iniciar Aula</button>
+                </section>
+                <section>
+                    <h3 id="aula-numero"> Aula numero</h3>
+                    <p id="aula-titulo">Aula tiutlo</p>
+                    <button id="ver-mais">Iniciar Aula</button>
+                </section>
             </section>
         </article>
-
+                
         <article id="informacao-perfil">
             <div id="divBusca">
-                <img src="{{url_for('static', filename='img/busca.png')}}" id="btnBusca" alt="Buscar"/>
+                <img src="busca.png" id="btnBusca" alt="Buscar"/>
                 <input type="text" id="txtBusca" placeholder="Procure por palavras chaves"/>
             </div>
                 <div id="saudacao-perfil">
@@ -92,17 +97,9 @@
                     <h2 id="dois-linha">Guilherme Delgado</h2>
                     <p id="tres-linha">Seja bem-vindo ao Ambiente Virtual de Aprendizagem!</p>
                 </div>
-                <img id="imagem-perfil" src="{{url_for('static', filename='img/guigui.jpeg')}}">
-
-                <section id="ultima-disciplina">
-                    <h2>Lab. Interfaces</h2>
-                    <h2>Aula 6</h2>
-                    <p>Desbravando o Adobe XD</p>
-                    <div class="progress-bar" ></div>
-                </section>
-
+                <img id="imagem-perfil" src="guigui.jpeg">
                 <section id="lembretes-titulo-area">
-                    <h2>Lembretes</h2>
+                    <h2>Provas e trabalhos</h2>
                 </section>
                 <section id="lembretes">
                     <section>
@@ -114,13 +111,6 @@
                     </section>
                     <section>
                         <img id="imagem-aviso" src="{{url_for('static', filename='img/email.png')}}"/>
-                        <div id="mensagem">
-                            <h4>Avaliação P1 - legislação Aplic...</h4>
-                            <p>Sua avaliação não foi entregue, vocêt em 4 horas para envias</p>
-                        </div>
-                    </section>
-                    <section>
-                        <img id="imagem-aviso" src="{{url_for('static', filename='img/exclamation.png')}}"/>
                         <div id="mensagem">
                             <h4>Avaliação P1 - legislação Aplic...</h4>
                             <p>Sua avaliação não foi entregue, vocêt em 4 horas para envias</p>

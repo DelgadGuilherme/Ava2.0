@@ -1,0 +1,230 @@
+/** ------------------------------------------------------------------------------------ Inicio Body ------------------------------------------------------------------------------------ **/
+body{
+    display: grid;
+    grid-template-areas: "menu conteudo perfil";
+    grid-template-columns: 6vw 69vw 23vw;
+    background-color:  #F7F8FA;
+    font-family: 'Lato', sans-serif;
+}
+/** ------------------------------------------------------------------------------------ Fim Body ------------------------------------------------------------------------------------ **/
+
+
+/** ------------------------------------------------------------------------------------ Inicio Menu ------------------------------------------------------------------------------------ **/
+
+header{
+    grid-area: menu;
+    background-color: #FFFFFF;
+    margin-right: 30px;
+}
+
+header img{
+    max-width: 80px;;
+}
+
+header nav ul{
+    margin-top: 10px;
+    padding: 0;
+    list-style-type: none;
+    display: grid;
+    grid-auto-flow: row;
+    grid-auto-rows: 10vh;
+    justify-content: space-around;
+    justify-items: center;
+    background-color:#FFFFFF;
+}
+/** ------------------------------------------------------------------------------------ Fim Menu ------------------------------------------------------------------------------------ **/
+
+/** ------------------------------------------------------------------------------------ Inicio Saldação Central ------------------------------------------------------------------------------------ **/
+#saudacao{
+    display: grid;
+    font-family: 'Raleway', sans-serif;
+    grid-template-areas: "prin-saudacao buttao-saudacao" "sub-saudacao sub-saudacao";
+    grid-template-columns: 60vw 8vw;
+    grid-area: saudacao;
+
+}
+#saudacao p{
+    grid-area: sub-saudacao;
+    color:#7F8FA4;
+}
+
+#saudacao h1{
+    grid-area: prin-saudacao;
+    font-size: 4vh;
+    padding: 0;
+    margin: 0;
+}
+
+#saudacao button{
+    color:white;
+    background-color: #5E2129;
+    border-radius: 15%;
+    grid-area: buttao-saudacao;
+}
+/** ------------------------------------------------------------------------------------ Final Saldação Centralv ------------------------------------------------------------------------------------ **/
+
+
+/** ------------------------------------------------------------------------------------ Inicio Aula ------------------------------------------------------------------------------------ **/
+
+#informacao-geral{
+    display: grid;
+    grid-template-areas: "saudacao saudacao" "aula-conteudo-titulo aula-conteudo-titulo" "aula-todo-conteudo aula-todo-conteudo";
+    grid-template-rows: 10vh 10vh 60vh;
+    grid-area: conteudo;
+    background-color:  #F7F8FA;
+}
+
+
+#aula-conteudo-titulo{
+    grid-area: aula-conteudo-titulo;
+}
+
+#aula-todo-conteudo{
+    grid-area: aula-todo-conteudo;
+    display: grid;
+    grid-template-columns: repeat(3, minmax(200px, 40vh));
+    grid-row-gap: 30px;
+    grid-column-gap: 30px;
+    justify-content: center;
+    margin-right: 20px;
+}
+
+#aula-todo-conteudo section{
+    background-color: #5E2129;
+    background-image: url("Pattern.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: white;
+    border-radius: 20px;
+    display: grid;
+    grid-template-areas: "aula-numero" "aula-titulo"  "aula-ver-mais";
+    grid-template-rows: 3vw 3vw 1.5vw;
+    grid-template-columns: 20vh 20vh 15vh;
+}
+
+#aula-todo-conteudo section h3{
+    margin-top: 40px;
+    margin-left: 30px;
+    font-family: 'Raleway', sans-serif;
+    grid-area: aula-numero;
+}
+
+#aula-todo-conteudo section p{
+    margin-left: 30px;
+    grid-area: aula-titulo;
+}
+
+#aula-todo-conteudo section button{
+    margin-left: 30px;
+    margin-right: 30px;
+    font-family: 'Raleway', sans-serif;
+    grid-area: aula-ver-mais;
+    border-radius: 20%;
+    font-size: large;
+    border-color: white;
+
+}
+
+
+/** ------------------------------------------------------------------------------------ Final Aula ------------------------------------------------------------------------------------ **/
+
+/** ------------------------------------------------------------------------------------ Inicio Pefil ------------------------------------------------------------------------------------ **/
+
+#divBusca{
+    grid-area: busca;
+    background-color:lightgrey;
+    border-radius:20px;
+    width: 350px;
+    height: 40px;
+}
+  
+#txtBusca{
+    background-color:transparent;
+    padding-left:5px;
+    font-size:18px;
+    border:none;
+    width: 300px;
+    height: 40px;
+    margin-left: 20px;
+}
+
+#informacao-perfil{
+    grid-area: perfil;
+    display: grid;
+    background-color:#FFFFFF;
+    grid-template-areas: "busca busca" "saudacao-perfil imagem" "lembrete-titulo lembrete-titulo" "lembretes lembretes";
+    grid-template-rows: 15vh 25vh  5vh 30vh;
+    justify-items: stretch;
+    padding: 30px;
+}
+
+#saudacao-perfil{
+    grid-area: saudacao-perfil;
+}
+
+#um-linha{
+   margin-bottom: 5px;
+}
+
+#dois-linha{
+    margin-bottom: 5px;
+    margin-top: 5px;
+}
+
+#tres-linha{
+    margin-top: 5px;
+}
+
+#imagem-perfil{
+    grid-area: imagem;
+    border-radius: 50%;
+    max-width: 140px;
+    margin-top: 10px;
+
+}
+
+#lembrete-titulo-area{
+    grid-area: lembrete-titulo;
+    margin: 0;
+}
+
+
+#lembretes{
+    display: grid;
+    grid-area: lembretes;
+    grid-auto-flow: row;
+    grid-auto-rows: 6vw;
+    justify-content: space-around;
+
+}
+
+#lembretes section{
+    display: grid;
+    grid-template-areas: "imagem-aviso mensagem";
+    grid-template-columns: 3vw 16vw;
+    align-items: center;
+}
+
+#mensagem{
+    grid-area: mensagem;
+}
+
+#mensagem h4{
+    margin: 0;
+}
+
+#mensagem p{
+    margin: 0;
+}
+
+#imagem-aviso{
+    max-width: 100px;
+    grid-area: imagem-aviso;
+}
+
+/** ------------------------------------------------------------------------------------ Final Pefil ------------------------------------------------------------------------------------ **/
+
+
+
+
+

@@ -1,12 +1,11 @@
-from application.model.entity.disciplina import Disciplina
-from application import disciplina_list
+from application import disciplina_lista
 
 class DisciplinaDAO:
     def __init__(self):
-        self.disciplina_list = disciplina_list
+        self._disciplina_lista = disciplina_lista
 
     def listar_todo(self):
-        return self.disciplina_list
+        return self._disciplina_lista
 
     def listar_aula(self, disciplina):
         return disciplina.get_aula_lista

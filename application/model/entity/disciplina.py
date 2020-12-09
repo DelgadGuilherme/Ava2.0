@@ -7,9 +7,12 @@ class Disciplina:
         self._horario = horario
         self._trabalho = trabalho
         self._forum = forum
-        self._avalicao = avalicao
+        self._avaliacao = avaliacao
         self._aula_lista = aula_lista
                 
+    def get_id(self):
+        return self._id
+        
     def get_nome(self):
         return self._nome
 
@@ -26,4 +29,4 @@ class Disciplina:
         return self._forum
 
     def get_avaliacao(self):
-        return self._avalicao
+        return self._avaliacao
