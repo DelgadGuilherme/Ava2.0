@@ -19,4 +19,6 @@ disciplina5 = Disciplina(5, "Gestão estrategica de pessoas", "Claudenir", "19:0
 disciplina6 = Disciplina(6, "Gestão ambiental", "Cleber", "8:00 - 10:30", 2, 10, 2)
 disciplina7 = Disciplina(7, "Empreendedorismo e inovação", "Marco Antonio", "10:30 - 12:00", 2, 5, 2)
 
-perido1 = Periodo(4, "4º",[disciplina1, disciplina2, disciplina3, disciplina4, disciplina5, disciplina6, disciplina7])
+disciplina_list = [disciplina1,disciplina2,disciplina3,disciplina4,disciplina5,disciplina6,disciplina7]
+
+aula_list = []

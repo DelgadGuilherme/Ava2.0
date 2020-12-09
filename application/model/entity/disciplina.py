@@ -8,7 +8,8 @@ class Disciplina:
         self._trabalho = trabalho
         self._forum = forum
         self._avalicao = avalicao
-        
+        self._aula_lista = []
+                
     def get_nome(self):
         return self._nome
 
