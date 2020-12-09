@@ -1,6 +1,6 @@
 class Disciplina:
 
-    def __init__(self, id, nome, professor, horario, trabalho, forum, avaliacao):
+    def __init__(self, id, nome, professor, horario, trabalho, forum, avaliacao, aula_lista):
         self._id = id
         self._nome = nome
         self._professor = professor
@@ -8,7 +8,7 @@ class Disciplina:
         self._trabalho = trabalho
         self._forum = forum
         self._avalicao = avalicao
-        self._aula_lista = []
+        self._aula_lista = aula_lista
                 
     def get_nome(self):
         return self._nome
