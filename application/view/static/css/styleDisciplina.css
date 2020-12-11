@@ -2,9 +2,10 @@
 body{
     display: grid;
     grid-template-areas: "menu conteudo perfil";
-    grid-template-columns: 6vw 69vw 25vw;
+    grid-template-columns: 6vw 69vw 24vw;
     background-color:  #F7F8FA;
     font-family: 'Lato', sans-serif;
+    margin: 0;
 }
 /** ------------------------------------------------------------------------------------ Fim Body ------------------------------------------------------------------------------------ **/
 
@@ -34,13 +35,14 @@ header nav ul{
 }
 /** ------------------------------------------------------------------------------------ Fim Menu ------------------------------------------------------------------------------------ **/
 
-/** ------------------------------------------------------------------------------------ Inicio Saldação Central ------------------------------------------------------------------------------------ **/
+/** ------------------------------------------------------------------------------------ Inicio Saudação Central ------------------------------------------------------------------------------------ **/
 #saudacao{
     display: grid;
     font-family: 'Raleway', sans-serif;
     grid-template-areas: "prin-saudacao buttao-saudacao" "sub-saudacao sub-saudacao";
     grid-template-columns: 60vw 8vw;
     grid-area: saudacao;
+    margin-top: 20px;
 
 }
 #saudacao p{
@@ -61,7 +63,7 @@ header nav ul{
     border-radius: 15%;
     grid-area: buttao-saudacao;
 }
-/** ------------------------------------------------------------------------------------ Final Saldação Centralv ------------------------------------------------------------------------------------ **/
+/** ------------------------------------------------------------------------------------ Final Saudação Centralv ------------------------------------------------------------------------------------ **/
 
 
 /** ------------------------------------------------------------------------------------ Inicio Aula ------------------------------------------------------------------------------------ **/
@@ -69,7 +71,7 @@ header nav ul{
 #informacao-geral{
     display: grid;
     grid-template-areas: "saudacao saudacao" "aula-conteudo-titulo aula-conteudo-titulo" "aula-todo-conteudo aula-todo-conteudo";
-    grid-template-rows: 10vh 10vh 60vh;
+    grid-template-rows: 12vh 10vh 60vh;
     grid-area: conteudo;
     background-color:  #F7F8FA;
 }
@@ -77,6 +79,8 @@ header nav ul{
 
 #aula-conteudo-titulo{
     grid-area: aula-conteudo-titulo;
+    margin-left: 20px;
+    margin-right: 20px;
 }
 
 #aula-todo-conteudo{

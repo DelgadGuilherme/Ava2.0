@@ -2,9 +2,10 @@
 body{
     display: grid;
     grid-template-areas: "menu conteudo perfil";
-    grid-template-columns: 6vw 69vw 25vw;
+    grid-template-columns: 6vw 69vw 24vw;
     background-color:  #F7F8FA;
     font-family: 'Lato', sans-serif;
+    margin: 0;
 }
 /** ------------------------------------------------------------------------------------ Fim Body ------------------------------------------------------------------------------------ **/
 
@@ -38,20 +39,21 @@ header nav ul{
 #informacao-geral{
     display: grid;
     grid-template-areas: "saudacao saudacao " "atalho-titulo atalho-titulo" "atalhos atalhos" "disciplinas-titulo disciplinas-titulo" "disciplinas disciplinas";
-    grid-template-rows: 10vh 7vh 15vh 10vh 55vh;
+    grid-template-rows: 12vh 7vh 15vh 10vh 55vh;
     grid-area: conteudo;
     background-color:  #F7F8FA;
 }
 
 /** ------------------------------------------------------------------------------------ Fim Article Central ------------------------------------------------------------------------------------ **/
 
-/** ------------------------------------------------------------------------------------ Inicio Saldação Central ------------------------------------------------------------------------------------ **/
+/** ------------------------------------------------------------------------------------ Inicio Saudação Central ------------------------------------------------------------------------------------ **/
 #saudacao{
     display: grid;
     font-family: 'Raleway', sans-serif;
     grid-template-areas: "prin-saudacao buttao-saudacao" "sub-saudacao sub-saudacao";
     grid-template-columns: 60vw 8vw;
     grid-area: saudacao;
+    margin-top: 20px;
 
 }
 #saudacao p{
@@ -72,7 +74,7 @@ header nav ul{
     border-radius: 10%;
     grid-area: buttao-saudacao;
 }
-/** ------------------------------------------------------------------------------------ Final Saldação Centralv ------------------------------------------------------------------------------------ **/
+/** ------------------------------------------------------------------------------------ Final Saudação Centralv ------------------------------------------------------------------------------------ **/
 
 /** ------------------------------------------------------------------------------------ Inicio Atalhos Central ------------------------------------------------------------------------------------ **/
 #atalhos-titulo{
@@ -237,6 +239,7 @@ header nav ul{
     background-color:#FFFFFF;
     grid-template-areas: "busca busca""saudacao-perfil imagem" "ultima ultima" "lembrete-titulo lembrete-titulo" "lembretes lembretes";
     grid-template-rows: 15vh 25vh 20vh 5vh 30vh;
+    grid-template-columns: 14vw;
     padding: 30px;
 }
 
@@ -275,8 +278,9 @@ header nav ul{
     background-size: cover;
     background-color: #5E2129;
     grid-template-rows: 40px 40px 60px;
+    grid-template-columns: 13vw;
     padding: 10px;
-    width:400px;
+    width:350px;
 }
 
 #ultima-disciplina h2{
