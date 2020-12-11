@@ -39,57 +39,19 @@
                 <hr>
             </section>
             <section id="aula-todo-conteudo">
+                {% for aula in aula_lista %}
                 <section>
-                    <h3 id="aula-numero"> Aula numero</h3>
-                    <p id="aula-titulo">Aula tiutlo</p>
+                    <h3 id="aula-numero">{{aula.get_numero()}}</h3>
+                    <p id="aula-titulo">{{aula.get_titulo()}}</p>
                     <button id="ver-mais">Iniciar Aula</button>
                 </section>
-                <section>
-                    <h3 id="aula-numero"> Aula numero</h3>
-                    <p id="aula-titulo">Aula tiutlo</p>
-                    <button id="ver-mais">Iniciar Aula</button>
-                </section>
-                <section>
-                    <h3 id="aula-numero"> Aula numero</h3>
-                    <p id="aula-titulo">Aula tiutlo</p>
-                    <button id="ver-mais">Iniciar Aula</button>
-                </section>
-                <section>
-                    <h3 id="aula-numero"> Aula numero</h3>
-                    <p id="aula-titulo">Aula tiutlo</p>
-                    <button id="ver-mais">Iniciar Aula</button>
-                </section>
-                <section>
-                    <h3 id="aula-numero"> Aula numero</h3>
-                    <p id="aula-titulo">Aula tiutlo</p>
-                    <button id="ver-mais">Iniciar Aula</button>
-                </section>
-                <section>
-                    <h3 id="aula-numero"> Aula numero</h3>
-                    <p id="aula-titulo">Aula tiutlo</p>
-                    <button id="ver-mais">Iniciar Aula</button>
-                </section>
-                <section>
-                    <h3 id="aula-numero"> Aula numero</h3>
-                    <p id="aula-titulo">Aula tiutlo</p>
-                    <button id="ver-mais">Iniciar Aula</button>
-                </section>
-                <section>
-                    <h3 id="aula-numero"> Aula numero</h3>
-                    <p id="aula-titulo">Aula tiutlo</p>
-                    <button id="ver-mais">Iniciar Aula</button>
-                </section>
-                <section>
-                    <h3 id="aula-numero"> Aula numero</h3>
-                    <p id="aula-titulo">Aula tiutlo</p>
-                    <button id="ver-mais">Iniciar Aula</button>
-                </section>
+                {% endfor %}
             </section>
         </article>
                 
         <article id="informacao-perfil">
             <div id="divBusca">
-                <img src="busca.png" id="btnBusca" alt="Buscar"/>
+                <img src="{{url_for('static', filename='img/busca.png')}}" id="btnBusca" alt="Buscar"/>
                 <input type="text" id="txtBusca" placeholder="Procure por palavras chaves"/>
             </div>
                 <div id="saudacao-perfil">
@@ -97,25 +59,20 @@
                     <h2 id="dois-linha">Guilherme Delgado</h2>
                     <p id="tres-linha">Seja bem-vindo ao Ambiente Virtual de Aprendizagem!</p>
                 </div>
-                <img id="imagem-perfil" src="guigui.jpeg">
+                <img id="imagem-perfil" src="{{url_for('static', filename='img/guigui.jpeg')}}">
                 <section id="lembretes-titulo-area">
                     <h2>Provas e trabalhos</h2>
                 </section>
                 <section id="lembretes">
-                    <section>
-                        <img id="imagem-aviso" src="{{url_for('static', filename='img/exclamation.png')}}"/>
-                        <div id="mensagem">
-                            <h4>Avaliação P1 - legislação Aplic...</h4>
-                            <p>Sua avaliação não foi entregue, vocêt em 4 horas para envias</p>
-                        </div>
-                    </section>
+                    {% for lembrete in lembretes_lista %}
                     <section>
                         <img id="imagem-aviso" src="{{url_for('static', filename='img/email.png')}}"/>
                         <div id="mensagem">
-                            <h4>Avaliação P1 - legislação Aplic...</h4>
-                            <p>Sua avaliação não foi entregue, vocêt em 4 horas para envias</p>
+                            <h4>{{lembrete.get_titulo()}}</h4>
+                            <p>Data para entrega: {{lembrete.get_data_entre()}}</p>
                         </div>
                     </section>
+                    {% endfor %}
                 </section>
         </article>
         <!--

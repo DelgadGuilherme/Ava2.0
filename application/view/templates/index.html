@@ -105,27 +105,15 @@
                     <h2>Lembretes</h2>
                 </section>
                 <section id="lembretes">
+                    {% for lembrete in lembrete_lista %}
                     <section>
                         <img id="imagem-aviso" src="{{url_for('static', filename='img/exclamation.png')}}"/>
                         <div id="mensagem">
-                            <h4>Avaliação P1 - legislação Aplic...</h4>
-                            <p>Sua avaliação não foi entregue, vocêt em 4 horas para envias</p>
+                            <h4>{{lembrete.get_titulo()}}</h4>
+                            <p>Data para entrega: {{lembrete.get_data_entre()}}</p>
                         </div>
                     </section>
-                    <section>
-                        <img id="imagem-aviso" src="{{url_for('static', filename='img/email.png')}}"/>
-                        <div id="mensagem">
-                            <h4>Avaliação P1 - legislação Aplic...</h4>
-                            <p>Sua avaliação não foi entregue, vocêt em 4 horas para envias</p>
-                        </div>
-                    </section>
-                    <section>
-                        <img id="imagem-aviso" src="{{url_for('static', filename='img/exclamation.png')}}"/>
-                        <div id="mensagem">
-                            <h4>Avaliação P1 - legislação Aplic...</h4>
-                            <p>Sua avaliação não foi entregue, vocêt em 4 horas para envias</p>
-                        </div>
-                    </section>
+                    {% endfor %}
                 </section>
         </article>
         <!--

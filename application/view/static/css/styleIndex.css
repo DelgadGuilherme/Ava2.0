@@ -2,7 +2,7 @@
 body{
     display: grid;
     grid-template-areas: "menu conteudo perfil";
-    grid-template-columns: 6vw 69vw 23vw;
+    grid-template-columns: 6vw 69vw 25vw;
     background-color:  #F7F8FA;
     font-family: 'Lato', sans-serif;
 }
@@ -270,7 +270,7 @@ header nav ul{
     grid-area: ultima;
     border-radius: 15%;
     color: white;
-    background-image: url("Pattern.png");
+    background-image: url("../img/Pattern.png");
     background-repeat: no-repeat;
     background-size: cover;
     background-color: #5E2129;

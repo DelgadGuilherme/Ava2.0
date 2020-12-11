@@ -1,3 +1,4 @@
+from application.model.entity.disciplina import Disciplina
 from application import disciplina_lista
 
 class DisciplinaDAO:
