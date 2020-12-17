@@ -1,6 +1,6 @@
 /** ------------------------------------------------------------------------------------ Inicio Body ------------------------------------------------------------------------------------ **/
 body{
-    display: grid;
+    display: flex;
     grid-template-areas: "menu conteudo perfil";
     grid-template-columns: 6vw 69vw 24vw;
     background-color:  #F7F8FA;
@@ -38,8 +38,9 @@ header nav ul{
 
 #informacao-geral{
     display: grid;
-    grid-template-areas: "saudacao saudacao " "atalho-titulo atalho-titulo" "atalhos atalhos" "disciplinas-titulo disciplinas-titulo" "disciplinas disciplinas";
-    grid-template-rows: 12vh 7vh 15vh 10vh 55vh;
+    grid-template-areas: "saudacao" "atalho-titulo" "atalhos" "disciplinas-titulo" "disciplinas";
+    grid-template-rows: 12vh 7vh 15vh 10vh auto;
+    grid-template-columns: auto;
     grid-area: conteudo;
     background-color:  #F7F8FA;
 }
@@ -86,15 +87,17 @@ header nav ul{
 
 #atalhos{
     grid-area: atalhos;
-    display: grid;
-    grid-template-columns: repeat(4, minmax(200px, 50vh));
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: space-around;
     grid-column-gap: 140px;
+    grid-row-gap: 20px;
     padding: 40px;
     padding-top: 0px;  
 }
 
 #atalhos div{
-    display: grid;
     grid-template-areas: "atalho"  "info";
     grid-template-rows: 5vh 6vh;
     margin: 0;
@@ -124,11 +127,12 @@ header nav ul{
 
 /** ------------------------------------------------------------------------------------ Incio Disciplinas Central ------------------------------------------------------------------------------------ **/
 #disciplinas{
-    display: grid;
-    grid-template-columns: repeat(3, minmax(200px, 40vh));
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
     grid-row-gap: 30px;
     grid-column-gap: 30px;
-    justify-content: center;
+    justify-content: space-around;
     grid-area: disciplinas;
     margin-right: 20px;
 }
@@ -146,6 +150,7 @@ header nav ul{
     display: grid;
     background-color:#FFFFFF;
     grid-template-areas: "nome-disciplina nome-disciplina" "informacao informacao"  "acessar acessar";
+    grid-template-columns: 20vh 20vh;
     grid-template-rows: 40px;
 }
 
@@ -211,7 +216,7 @@ header nav ul{
     text-decoration: none;
 }
   
-/** ------------------------------------------------------------------------------------ Final Disciplinas Central ------------------------------------------------------------------------------------ **/
+/** ------------------------------------------------------------------------------------ Final Disciplinas Central   ------------------------------------------------------------------------------------ **/
 
 /** ------------------------------------------------------------------------------------ Inicio Pefil ------------------------------------------------------------------------------------ **/
 
@@ -340,3 +345,23 @@ header nav ul{
 
 /** ------------------------------------------------------------------------------------ Final Pefil ------------------------------------------------------------------------------------ **/
 
+@media screen and (max-width: 1300px) {
+
+    body{
+        display: grid;
+        grid-template-areas: "menu conteudo";
+        grid-template-columns: auto;
+    }
+
+    #informacao-geral{
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: column;
+        grid-template-areas: "saudacao" "atalho-titulo" "atalhos" "disciplinas-titulo" "disciplinas";
+    }
+
+    #informacao-perfil{
+        display: none;
+    }
+
+}

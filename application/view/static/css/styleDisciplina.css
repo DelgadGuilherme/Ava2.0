@@ -1,6 +1,6 @@
 /** ------------------------------------------------------------------------------------ Inicio Body ------------------------------------------------------------------------------------ **/
 body{
-    display: grid;
+    display: flex;
     grid-template-areas: "menu conteudo perfil";
     grid-template-columns: 6vw 69vw 24vw;
     background-color:  #F7F8FA;
@@ -65,16 +65,22 @@ header nav ul{
 }
 /** ------------------------------------------------------------------------------------ Final Saudação Centralv ------------------------------------------------------------------------------------ **/
 
-
-/** ------------------------------------------------------------------------------------ Inicio Aula ------------------------------------------------------------------------------------ **/
+/** ------------------------------------------------------------------------------------ Inicio Informação  ------------------------------------------------------------------------------------ **/
 
 #informacao-geral{
     display: grid;
     grid-template-areas: "saudacao saudacao" "aula-conteudo-titulo aula-conteudo-titulo" "aula-todo-conteudo aula-todo-conteudo";
-    grid-template-rows: 12vh 10vh 60vh;
+    grid-template-rows: 12vh 10vh 64vh;
     grid-area: conteudo;
     background-color:  #F7F8FA;
 }
+
+
+/** ------------------------------------------------------------------------------------ Final Informação ------------------------------------------------------------------------------------ **/
+
+
+/** ------------------------------------------------------------------------------------ Inicio Aula ------------------------------------------------------------------------------------ **/
+
 
 
 #aula-conteudo-titulo{
@@ -85,11 +91,12 @@ header nav ul{
 
 #aula-todo-conteudo{
     grid-area: aula-todo-conteudo;
-    display: grid;
-    grid-template-columns: repeat(3, minmax(200px, 40vh));
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
     grid-row-gap: 30px;
     grid-column-gap: 30px;
-    justify-content: center;
+    justify-content: space-around;
     margin-right: 20px;
 }
 
@@ -98,12 +105,12 @@ header nav ul{
     background-image:  url("../img/Pattern.png");
     background-repeat: no-repeat;
     background-size: cover;
+    display: grid;
     color: white;
     border-radius: 20px;
-    display: grid;
     grid-template-areas: "aula-numero" "aula-titulo"  "aula-ver-mais";
-    grid-template-rows: 3vw 3vw 1.5vw;
-    grid-template-columns: 20vh 20vh 15vh;
+    grid-template-rows: 3vw 4vw 1.5vw;
+    grid-template-columns: 20vh 20vh;
 }
 
 #aula-todo-conteudo section h3{
@@ -229,6 +236,34 @@ header nav ul{
 /** ------------------------------------------------------------------------------------ Final Pefil ------------------------------------------------------------------------------------ **/
 
 
+@media screen and (max-width: 1300px) {
 
+    body{
+        display: grid;
+        grid-template-areas: "menu conteudo";
+        grid-template-columns: auto;
+    }
+
+    #informacao-geral{
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: column;
+        grid-template-areas: "saudacao" "aula-conteudo-titulo" "aula-todo-conteudo";
+        grid-template-rows: 12vh 10vh auto;
+        grid-area: conteudo;
+        background-color:  #F7F8FA;
+    }
+
+    #aula-todo-conteudo section{
+        grid-template-rows: auto;
+        grid-template-columns: 20vh 10vh;
+    }
+
+
+    #informacao-perfil{
+        display: none;
+    }
+
+}
 
 
